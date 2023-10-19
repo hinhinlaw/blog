@@ -36,7 +36,6 @@ export function getSortedPostsData() {
 
     // 使用matter提取.md文件元数据: {data: {//元数据}, content: '内容'}
     const matterResult = matter(fileContents)
-
     return {
       id,
       ...(matterResult.data as MatterMark['data'])
@@ -69,8 +68,9 @@ export function getAllPostIds() {
 export async function getPostData(id: string) {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
+  // console.log('fileContents',fileContents)
   const matterResult = matter(fileContents)
-
+  console.log('matterResult', matterResult)
   return {
     content: await serialize(matterResult.content, {
       mdxOptions: {remarkPlugins: [prism, externalLinks]}
