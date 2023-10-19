@@ -9,6 +9,7 @@ import {serialize} from 'next-mdx-remote/serialize'
 import prism from 'remark-prism'
 // 使markdown的链接是在新页面打开链接
 import externalLinks from 'remark-external-links'
+import markdownIt from 'markdown-it'
 
 interface MatterMark {
   data: { date: string; title: string };
@@ -61,6 +62,8 @@ export function getAllPostIds() {
   })
 }
 
+const md = new markdownIt()
+
 /**
  * 获取指定文章内容
  * @param id .md文件的id
@@ -68,13 +71,13 @@ export function getAllPostIds() {
 export async function getPostData(id: string) {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
-  // console.log('fileContents',fileContents)
   const matterResult = matter(fileContents)
-  console.log('matterResult', matterResult)
+  const mdString = md.render(matterResult.content)
   return {
     content: await serialize(matterResult.content, {
       mdxOptions: {remarkPlugins: [prism, externalLinks]}
     }),
+    md: mdString,
     ...(matterResult.data as MatterMark['data'])
   }
 }

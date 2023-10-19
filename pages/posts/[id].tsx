@@ -11,6 +11,7 @@ interface IProps {
   postData: {
     title: string
     date:string
+    md: string
     content: MDXRemoteProps
   }
 }
@@ -27,6 +28,7 @@ export default function Post({postData}: IProps) {
       <Date dateString={postData.date}></Date>
       <article className="py-8 prose prose-h1:mt-8">
         <MDXRemote {...postData.content}></MDXRemote>
+        {/* <div className='prose w-full' dangerouslySetInnerHTML={{__html: postData.md}}></div> */}
       </article>
     </Layout>
   )
@@ -42,7 +44,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({params}) => {
   const postData = await getPostData(params!.id as string)
-  console.log('postData', postData)
   return {
     props: {
       postData
