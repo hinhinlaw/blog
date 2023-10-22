@@ -1,0 +1,1 @@
+export const assetBaseUrl = `https://cdn.jsdelivr.net/gh/hinhinlaw/resource@main/`

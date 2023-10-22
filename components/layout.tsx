@@ -56,7 +56,7 @@ export default function Layout({ children, home }: Props) {
       </nav>
       <main>{children}</main>
       {!home && (
-        <div>
+        <div className="mt-8">
           <p
             onClick={back}
             className="text-gray-400 hover:text-gray-600 transition-color duration-300 cursor-pointer"
