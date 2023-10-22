@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'SometypeMono': ['SometypeMono'],
+      'robotoBold': ['robotoBold'],
+      'lato': ['lato'],
+    }
   },
   plugins: [
     require("@tailwindcss/typography")

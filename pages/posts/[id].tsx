@@ -22,11 +22,11 @@ export default function Post({postData}: IProps) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <h1 className="text-3xl font-extrabold my-4 tracking-tighter">
+      <h1 className="text-4xl mt-10 mb-2 tracking-tighter text-zinc-700">
         {postData.title}
       </h1>
       <Date dateString={postData.date}></Date>
-      <article className="py-8 prose prose-h1:mt-8">
+      <article className="py-8 prose prose-h1:mt-8 mt-6">
         <MDXRemote {...postData.content}></MDXRemote>
         {/* <div className='prose w-full' dangerouslySetInnerHTML={{__html: postData.md}}></div> */}
       </article>

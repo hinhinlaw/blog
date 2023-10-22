@@ -22,3 +22,17 @@ img {
 ::-webkit-scrollbar-track {
   background-color: #ddd;
 }
+
+/* 自定义字体 */
+@font-face {
+  font-family: 'SometypeMono';
+  src: url('../public/font/SometypeMono-Italic-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'robotoBold';
+  src: url('../public/font/Roboto-Bold.ttf');
+}
+@font-face {
+  font-family: 'lato';
+  src: url('../public/font/Lato-Black.ttf');
+}
