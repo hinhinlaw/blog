@@ -21,7 +21,7 @@ export default function Layout({ children, home }: Props) {
   };
 
   return (
-    <div className="max-w-2xl mx-auto px-4 mb-14">
+    <div className="max-w-3xl mx-auto px-4 mb-14">
       <Head>
         <link rel="icon" href="/images/avatar.jpg" />
         <meta name="description" content="hin的博客" />

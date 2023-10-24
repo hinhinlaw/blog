@@ -26,10 +26,9 @@ export default function Post({postData}: IProps) {
         {postData.title}
       </h1>
       <Date dateString={postData.date}></Date>
-      <article className="py-8 prose prose-h1:mt-8 mt-6">
+      <section className="py-8 prose mt-6">
         <MDXRemote {...postData.content}></MDXRemote>
-        {/* <div className='prose w-full' dangerouslySetInnerHTML={{__html: postData.md}}></div> */}
-      </article>
+      </section>
     </Layout>
   )
 }
