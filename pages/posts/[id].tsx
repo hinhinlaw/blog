@@ -5,18 +5,18 @@ import Head from "next/head";
 import Date from "../../components/date";
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote";
 // 引入代码高亮css
-import 'prismjs/themes/prism-okaidia.min.css'
+import "prismjs/themes/prism-okaidia.min.css";
 
 interface IProps {
   postData: {
-    title: string
-    date:string
-    md: string
-    content: MDXRemoteProps
-  }
+    title: string;
+    date: string;
+    md: string;
+    content: MDXRemoteProps;
+  };
 }
 
-export default function Post({postData}: IProps) {
+export default function Post({ postData }: IProps) {
   return (
     <Layout>
       <Head>
@@ -26,26 +26,41 @@ export default function Post({postData}: IProps) {
         {postData.title}
       </h1>
       <Date dateString={postData.date}></Date>
-      <section className="py-8 prose mt-6">
+      <article
+        className="
+          w-full
+          py-6
+          mt-6 
+          prose
+          prose-code:bg-gray-100
+          prose-code:rounded
+          prose-code:font-normal
+          prose-code:px-1
+          prose-code:py-1 
+          prose-code:mx-[3px] 
+          prose-code:break-all 
+          prose-code:before:content-['']
+          prose-code:after:content-['']
+        ">
         <MDXRemote {...postData.content}></MDXRemote>
-      </section>
+      </article>
     </Layout>
-  )
+  );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds()
+  const paths = getAllPostIds();
   return {
     paths,
-    fallback: false
-  }
-}
+    fallback: false,
+  };
+};
 
-export const getStaticProps: GetStaticProps = async ({params}) => {
-  const postData = await getPostData(params!.id as string)
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const postData = await getPostData(params!.id as string);
   return {
     props: {
-      postData
-    }
-  }
-}
+      postData,
+    },
+  };
+};

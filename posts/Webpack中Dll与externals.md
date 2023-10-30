@@ -32,7 +32,7 @@ module.exports = {
   </body>
 </html>
 ```
-可以看出，`**externals**`**的本质就是不打包指定的库，而是在运行时再通过网络请求CDN形式引入依赖**
+可以看出，**`externals`的本质就是不打包指定的库，而是在运行时再通过网络请求CDN形式引入依赖**
 <a name="ecP2t"></a>
 
 ### Dll
