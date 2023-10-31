@@ -1,1 +1,1 @@
-export const assetBaseUrl = `https://cdn.jsdelivr.net/gh/hinhinlaw/resource@main/`
+export const assetBaseUrl = `https://cdn.jsdelivr.net/gh/hinhinlaw/blog-resources@main`

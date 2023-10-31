@@ -34,16 +34,16 @@ const About: NextPage<IProps> = () => {
       </div>
       <div className="flex gap-2">
         <div className="width-full">
-          <img className="mb-2" src={`${assetBaseUrl}5551697953281_.pic_hd.jpg`}/>
-          <img src={`${assetBaseUrl}5611697953288_.pic_hd.jpg`}/>
+          <img className="mb-2" src={`${assetBaseUrl}/images/about/1.jpg`}/>
+          <img src={`${assetBaseUrl}/images/about/2.jpg`}/>
         </div>
         <div className="width-full">
-          <img className="mb-2" src={`${assetBaseUrl}5571697953283_.pic_hd.jpg`}/>
-          <img src={`${assetBaseUrl}5591697953286_.pic_hd.jpg`}/>
+          <img className="mb-2" src={`${assetBaseUrl}/images/about/3.jpg`}/>
+          <img src={`${assetBaseUrl}/images/about/4.jpg`}/>
         </div>
         <div className="width-full">
-          <img className="mb-2" src={`${assetBaseUrl}5581697953284_.pic_hd.jpg`}/>
-          <img src={`${assetBaseUrl}5601697953287_.pic_hd.jpg`}/>
+          <img className="mb-2" src={`${assetBaseUrl}/images/about/5.jpg`}/>
+          <img src={`${assetBaseUrl}/images/about/6.jpg`}/>
         </div>
       </div>
     </Layout>
