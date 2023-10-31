@@ -28,10 +28,10 @@ export default function Post({ postData }: IProps) {
       <Date dateString={postData.date}></Date>
       <article
         className="
-          w-full
           py-6
           mt-6 
           prose
+          max-w-none
           prose-code:bg-gray-100
           prose-code:rounded
           prose-code:font-normal
@@ -41,7 +41,8 @@ export default function Post({ postData }: IProps) {
           prose-code:break-all 
           prose-code:before:content-['']
           prose-code:after:content-['']
-        ">
+        "
+      >
         <MDXRemote {...postData.content}></MDXRemote>
       </article>
     </Layout>

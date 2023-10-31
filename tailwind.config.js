@@ -14,6 +14,9 @@ module.exports = {
             color: 'rgb(113 113 122 )',
             strong: {
               color: 'rgb(113 113 122 )',
+            },
+            blockquote: {
+              color: 'rgb(113 113 122 )',
             }
           }
         }
