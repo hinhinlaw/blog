@@ -5,6 +5,7 @@ import githubSVG from "@/public/svg/github.svg";
 import emailSVG from "@/public/svg/envelope-regular.svg";
 import Head from "next/head";
 import { assetBaseUrl } from "@/constant";
+import Tooltip from "@/components/ui-lib/Tooltip";
 
 interface IProps {}
 
@@ -25,25 +26,29 @@ const About: NextPage<IProps> = () => {
         <p>🌟 Just share something</p>
       </div>
       <div className="flex gap-4 pb-3 mb-12">
-        <a href="https://github.com/hinhinlaw" target="_blank">
-          <Image src={githubSVG} alt="github" width={20} />
-        </a>
-        <a href="https://github.com/hinhinlaw" target="_blank">
-          <Image src={emailSVG} alt="email" width={20} />
-        </a>
+        <Tooltip content="Github">
+          <a href="https://github.com/hinhinlaw" target="_blank">
+            <Image src={githubSVG} alt="github" width={20} />
+          </a>
+        </Tooltip>
+        <Tooltip content="email">
+          <a href="https://github.com/hinhinlaw" target="_blank">
+            <Image src={emailSVG} alt="email" width={20} />
+          </a>
+        </Tooltip>
       </div>
       <div className="flex gap-2">
         <div className="width-full">
-          <img className="mb-2" src={`${assetBaseUrl}/images/about/1.jpg`}/>
-          <img src={`${assetBaseUrl}/images/about/2.jpg`}/>
+          <img className="mb-2" src={`${assetBaseUrl}/images/about/1.jpg`} />
+          <img src={`${assetBaseUrl}/images/about/2.jpg`} />
         </div>
         <div className="width-full">
-          <img className="mb-2" src={`${assetBaseUrl}/images/about/3.jpg`}/>
-          <img src={`${assetBaseUrl}/images/about/4.jpg`}/>
+          <img className="mb-2" src={`${assetBaseUrl}/images/about/3.jpg`} />
+          <img src={`${assetBaseUrl}/images/about/4.jpg`} />
         </div>
         <div className="width-full">
-          <img className="mb-2" src={`${assetBaseUrl}/images/about/5.jpg`}/>
-          <img src={`${assetBaseUrl}/images/about/6.jpg`}/>
+          <img className="mb-2" src={`${assetBaseUrl}/images/about/5.jpg`} />
+          <img src={`${assetBaseUrl}/images/about/6.jpg`} />
         </div>
       </div>
     </Layout>

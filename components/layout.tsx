@@ -54,7 +54,7 @@ export default function Layout({ children, home }: Props) {
           </li>
         </ul>
       </nav>
-      <main>{children}</main>
+      <main className="">{children}</main>
       {!home && (
         <div className="mt-8">
           <p

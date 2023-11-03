@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@radix-ui/react-hover-card": "^1.0.7",
+    "@radix-ui/react-tooltip": "^1.0.7",
     "@tailwindcss/typography": "^0.5.10",
     "@types/markdown-it": "^13.0.4",
     "autoprefixer": "^10.4.13",

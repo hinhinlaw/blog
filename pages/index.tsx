@@ -6,6 +6,7 @@ import Date from "../components/date";
 
 import { getSortedPostsData } from "../utils/posts";
 import { useRouter } from "next/router";
+import HoverCard from "@/components/ui-lib/hover-card";
 
 interface IProps {
   allPostsData: {
@@ -51,6 +52,9 @@ const Home: NextPage<IProps> = ({ allPostsData }) => {
           })}
         </ul>
       </section>
+      <div className="text-zinc-200 text-[12px] flex justify-center w-1/2 absolute bottom-0 h-[40px]">
+        <a target="_blank" href="https://beian.miit.gov.cn">粤ICP备2023124894号</a>
+      </div>
     </Layout>
   );
 };
