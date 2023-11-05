@@ -5,7 +5,7 @@ import githubSVG from "@/public/svg/github.svg";
 import emailSVG from "@/public/svg/envelope-regular.svg";
 import Head from "next/head";
 import { assetBaseUrl } from "@/constant";
-import Tooltip from "@/components/ui-lib/Tooltip";
+import Tooltip from "@/components/ui-lib/tooltip";
 
 interface IProps {}
 
