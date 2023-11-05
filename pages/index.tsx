@@ -41,9 +41,7 @@ const Home: NextPage<IProps> = ({ allPostsData }) => {
                 <p
                   className="text-zinc-600 text-lg cursor-pointer hover:text-zinc-900 transition-colors"
                   onClick={() => onClickTitle(id)}
-                >
-                  {title}
-                </p>
+                >{title}</p>
                 <small>
                   <Date dateString={date}></Date>
                 </small>
