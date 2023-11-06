@@ -42,9 +42,7 @@ const Home: NextPage<IProps> = ({ allPostsData }) => {
                   className="text-zinc-600 text-lg cursor-pointer hover:text-zinc-900 transition-colors"
                   onClick={() => onClickTitle(id)}
                 >{title}</p>
-                <small>
-                  <Date dateString={date}></Date>
-                </small>
+                <small><Date dateString={date}></Date></small>
               </li>
             );
           })}
